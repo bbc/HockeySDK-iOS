@@ -144,15 +144,15 @@
     //    self.view.backgroundColor = DEFAULT_BACKGROUNDCOLOR_OS7;
   }
   
-  id refreshClass = NSClassFromString(@"UIRefreshControl");
-  if (refreshClass) {
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(reloadList) forControlEvents:UIControlEventValueChanged];
-  } else {
+//  id refreshClass = NSClassFromString(@"UIRefreshControl");
+//  if (refreshClass) {
+//    self.refreshControl = [[UIRefreshControl alloc] init];
+//    [self.refreshControl addTarget:self action:@selector(reloadList) forControlEvents:UIControlEventValueChanged];
+//  } else {
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRefresh
                                                                                            target:self
                                                                                            action:@selector(reloadList)];
-  }
+//  }
 }
 
 - (void)startLoadingIndicator {
